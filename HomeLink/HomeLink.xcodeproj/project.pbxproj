@@ -15,6 +15,10 @@
 		300F1F642C8B6AAE009DBDA9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300F1F632C8B6AAE009DBDA9 /* LoginView.swift */; };
 		300F1F672C8B6AC5009DBDA9 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300F1F662C8B6AC5009DBDA9 /* LoginViewModel.swift */; };
 		300F1F6A2C8B6FC1009DBDA9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300F1F692C8B6FC1009DBDA9 /* HomeView.swift */; };
+		300F1F6D2C8B8E50009DBDA9 /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300F1F6C2C8B8E50009DBDA9 /* APIHelper.swift */; };
+		300F1F712C8B9818009DBDA9 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300F1F702C8B9818009DBDA9 /* LoginButton.swift */; };
+		300F1F732C8BA23A009DBDA9 /* CustomSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300F1F722C8BA23A009DBDA9 /* CustomSecureField.swift */; };
+		300F1F752C8BA4BF009DBDA9 /* AlertDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300F1F742C8BA4BF009DBDA9 /* AlertDialog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +31,10 @@
 		300F1F632C8B6AAE009DBDA9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		300F1F662C8B6AC5009DBDA9 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		300F1F692C8B6FC1009DBDA9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		300F1F6C2C8B8E50009DBDA9 /* APIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
+		300F1F702C8B9818009DBDA9 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
+		300F1F722C8BA23A009DBDA9 /* CustomSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureField.swift; sourceTree = "<group>"; };
+		300F1F742C8BA4BF009DBDA9 /* AlertDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDialog.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +67,7 @@
 		300F1F4F2C8B6A12009DBDA9 /* HomeLink */ = {
 			isa = PBXGroup;
 			children = (
+				300F1F6B2C8B8E43009DBDA9 /* Resources */,
 				300F1F5E2C8B6A44009DBDA9 /* Models */,
 				300F1F5F2C8B6A4E009DBDA9 /* ViewModels */,
 				300F1F602C8B6A58009DBDA9 /* Views */,
@@ -95,12 +104,39 @@
 		300F1F602C8B6A58009DBDA9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				300F1F6E2C8B9805009DBDA9 /* Auth */,
 				300F1F522C8B6A12009DBDA9 /* ContentView.swift */,
 				300F1F612C8B6A9B009DBDA9 /* HeroView.swift */,
 				300F1F692C8B6FC1009DBDA9 /* HomeView.swift */,
 				300F1F632C8B6AAE009DBDA9 /* LoginView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		300F1F6B2C8B8E43009DBDA9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				300F1F6C2C8B8E50009DBDA9 /* APIHelper.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		300F1F6E2C8B9805009DBDA9 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				300F1F6F2C8B9809009DBDA9 /* Components */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		300F1F6F2C8B9809009DBDA9 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				300F1F702C8B9818009DBDA9 /* LoginButton.swift */,
+				300F1F742C8BA4BF009DBDA9 /* AlertDialog.swift */,
+				300F1F722C8BA23A009DBDA9 /* CustomSecureField.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,11 +209,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				300F1F6D2C8B8E50009DBDA9 /* APIHelper.swift in Sources */,
+				300F1F712C8B9818009DBDA9 /* LoginButton.swift in Sources */,
 				300F1F532C8B6A12009DBDA9 /* ContentView.swift in Sources */,
 				300F1F512C8B6A12009DBDA9 /* HomeLinkApp.swift in Sources */,
 				300F1F642C8B6AAE009DBDA9 /* LoginView.swift in Sources */,
 				300F1F6A2C8B6FC1009DBDA9 /* HomeView.swift in Sources */,
 				300F1F672C8B6AC5009DBDA9 /* LoginViewModel.swift in Sources */,
+				300F1F732C8BA23A009DBDA9 /* CustomSecureField.swift in Sources */,
+				300F1F752C8BA4BF009DBDA9 /* AlertDialog.swift in Sources */,
 				300F1F622C8B6A9B009DBDA9 /* HeroView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

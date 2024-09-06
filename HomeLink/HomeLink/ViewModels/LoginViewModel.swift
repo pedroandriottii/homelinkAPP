@@ -30,76 +30,37 @@ class LoginViewModel: ObservableObject {
         }
 
         self.isLoading = true
-
-        let emailLowercased = email.lowercased()
-
-        guard let url = URL(string: "https://homelinkapi-production.up.railway.app/auth/login") else {
-            print("URL inválida")
-            return
-        }
-
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-
+        
         let body: [String: Any] = [
-            "email": emailLowercased,
+            "email": email.lowercased(),
             "password": password
         ]
 
-        do {
-            request.httpBody = try JSONSerialization.data(withJSONObject: body, options: [])
-        } catch {
-            print("Erro ao serializar o corpo da requisição: \(error)")
+        guard let jsonData = try? JSONSerialization.data(withJSONObject: body, options: []) else {
+            self.errorMessage = "Erro ao preparar dados"
+            self.showAlert = true
+            self.isLoading = false
             return
         }
 
-        cancellable = URLSession.shared.dataTaskPublisher(for: request)
-            .tryMap { result -> Data in
-                if let httpResponse = result.response as? HTTPURLResponse {
-                    print("Código de status HTTP: \(httpResponse.statusCode)")
-                    
-                    guard (200...201).contains(httpResponse.statusCode) else {
-                        let statusError = NSError(domain: NSURLErrorDomain, code: httpResponse.statusCode, userInfo: [NSLocalizedDescriptionKey : "Erro HTTP \(httpResponse.statusCode)"])
-                        throw statusError
-                    }
-                }
-                return result.data
-            }
-            .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { completion in
+        APIHelper.shared.request(
+            endpoint: "/auth/login",
+            method: "POST",
+            body: jsonData,
+            responseType: LoginResponse.self
+        ) { result in
+            DispatchQueue.main.async{
                 self.isLoading = false
-                switch completion {
-                case .failure(let error):
-                    print("Erro detectado: \(error)")
-                    if let urlError = error as? URLError {
-                        print("Erro de URL: \(urlError)")
-                        self.errorMessage = urlError.localizedDescription
-                    } else if let nsError = error as NSError? {
-                        print("Erro HTTP detalhado: \(nsError.localizedDescription)")
-                        self.errorMessage = nsError.localizedDescription
-                    } else {
-                        print("Erro desconhecido: \(error)")
-                        self.errorMessage = error.localizedDescription
-                    }
-                    self.showAlert = true
-                case .finished:
-                    break
-                }
-            }, receiveValue: { data in
-                if let jsonString = String(data: data, encoding: .utf8) {
-                    print("Resposta JSON bruta: \(jsonString)")
-                }
-                do {
-                    let response = try JSONDecoder().decode(LoginResponse.self, from: data)
+                switch result {
+                case .success(let response):
                     UserDefaults.standard.set(response.accessToken, forKey: "accessToken")
                     self.isLoggedIn = true
-                    print("Token recebido: \(response.accessToken)")
-                } catch {
-                    print("Erro ao decodificar JSON: \(error)")
-                    self.errorMessage = "Erro ao processar resposta da API."
-                    self.showAlert = true
+                    print(response.accessToken)
+                case .failure(let error) :
+                        self.errorMessage = "Erro ao realizar o Login: \(error.localizedDescription)"
+                        self.showAlert = true
                 }
-            })
+            }
+        }
     }
 }

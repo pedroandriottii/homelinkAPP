@@ -12,38 +12,54 @@ struct LoginView: View {
 
     var body: some View {
         VStack {
-            TextField("Email", text: $loginViewModel.email)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding()
-
-            SecureField("Senha", text: $loginViewModel.password)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding()
-
-            Button(action: {
-                loginViewModel.login()
-            }) {
-                Text("Entrar")
-                    .padding()
-                    .background(Color.white)
-                    .foregroundColor(.blue)
-                    .cornerRadius(5)
+            VStack(alignment: .leading){
+                Text("Login")
+                    .foregroundColor(.white)
+                    .font(.title)
+                VStack{
+                    TextField("", text: $loginViewModel.email, prompt: Text("Email").foregroundColor(.gray))
+                        .padding()
+                        .frame(height: 50)
+                        .background(Color.hlSeccondary)
+                        
+                        .cornerRadius(12)
+                        .padding(.bottom)
+                    
+                    CustomSecureField(
+                        password: $loginViewModel.password,
+                        placeholder: "******",
+                        placeholderColor: .gray,
+                        backgroundColor: Color.hlSeccondary
+                        )
+                    .padding(.bottom)
+                    
+                    if(loginViewModel.showAlert){
+                        AlertDialog(message: loginViewModel.errorMessage)
+                            .frame(maxWidth: .infinity)
+                            .padding(.bottom)
+                    }
+                }
+                .foregroundColor(.white)
+                
+                
+                Button(action: {
+                    loginViewModel.login()
+                }) {
+                    LoginButton(isLoading: $loginViewModel.isLoading, isSuccess: $loginViewModel.isLoggedIn)
+                        .disabled(loginViewModel.isLoading)
+                }
+                .frame(maxWidth: .infinity)
+                .disabled(loginViewModel.isLoading)
+                Spacer()
             }
             .padding()
-            .disabled(loginViewModel.isLoading)
-            if(loginViewModel.showAlert){
-                Text(loginViewModel.errorMessage)
-                    .foregroundColor(.red)
-                    .padding()
+            .fullScreenCover(isPresented: $loginViewModel.isLoggedIn){
+                HomeView()
             }
+
         }
-        .fullScreenCover(isPresented: $loginViewModel.isLoggedIn){
-            HomeView()
-        }
-        .background(Color.blue)
-        .alert(isPresented: $loginViewModel.showAlert) {
-            Alert(title: Text("Erro"), message: Text(loginViewModel.errorMessage))
-        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color.hlBackground)
     }
 }
 

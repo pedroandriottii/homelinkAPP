@@ -16,23 +16,34 @@ struct HeroView: View {
             if isActive {
                 LoginView()
             } else {
-                Text("HOME LINK")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .opacity(fadeOut ? 0 : 1)
-                    .onAppear {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1){
-                            withAnimation(.easeInOut(duration: 1.0)){
-                                self.fadeOut = true
-                            }
-                        }
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                            self.isActive = true
+                VStack(){
+                    Spacer()
+                    Image("hlTextLogo")
+                    Text("SEU CONFORTO ESTÁ AQUI")
+                        .foregroundColor(.white)
+                        .bold()
+                        .font(.subheadline)
+                        .fontWeight(.bold)
+                    Spacer()
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(Color.hlBackground)
+                .opacity(fadeOut ? 0 : 1)
+                .onAppear {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.5){
+                        withAnimation(.easeInOut(duration: 1.0)){
+                            self.fadeOut = true
                         }
                     }
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+                        self.isActive = true
+                    }
+                }
             }
         }
         .navigationBarBackButtonHidden(true)
+        .background(Color.hlBackground)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 
