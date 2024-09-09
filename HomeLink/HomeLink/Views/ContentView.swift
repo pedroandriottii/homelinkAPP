@@ -10,29 +10,28 @@ import SwiftUI
 struct ContentView: View {
     @State private var animate = false
     var body: some View {
-        VStack(){
+        VStack(alignment: .center){
             Text("Bem vindo!")
             Spacer()
-            
-            NavigationLink(destination: HeroView()){
-                HStack{
-                    Text("Avançar")
-                        .font(.title2)
-                    Spacer()
-                    Image(systemName: "arrow.forward")
-                }
-                .padding(10)
-                .foregroundColor(.white)
-                .background(
-                    LinearGradient(gradient: Gradient(colors: [Color.black, Color.blue]), startPoint: animate ? .leading : .trailing, endPoint: animate ? .trailing : .leading))
-                .cornerRadius(7)
-                .padding(40)
-                .animation(.easeInOut(duration: 1.0), value: animate)
-                .onAppear{
-                    animate = true
-                }
+            VStack(alignment: .center) {
+                NavigationButton(
+                    title: "Login",
+                    destination: AnyView(HeroView()),
+                    isFilled: true
+                )
+                .padding(.bottom)
+                
+                NavigationButton(
+                    title: "Cadastre-se",
+                    destination: AnyView(SignupView()),
+                    isFilled: false
+                )
             }
-        }
+            .frame(maxWidth: .infinity)
+            .foregroundColor(.white)
+            .padding(40)
+        }.background(.hlBackground)
+        .foregroundColor(.white)
     }
 }
 

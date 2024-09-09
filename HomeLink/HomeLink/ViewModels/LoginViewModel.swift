@@ -57,7 +57,8 @@ class LoginViewModel: ObservableObject {
                     self.isLoggedIn = true
                     print(response.accessToken)
                 case .failure(let error) :
-                        self.errorMessage = "Erro ao realizar o Login: \(error.localizedDescription)"
+                    print(error.message)
+                    self.errorMessage = "Erro ao realizar o Login: \(error.message)"
                         self.showAlert = true
                 }
             }

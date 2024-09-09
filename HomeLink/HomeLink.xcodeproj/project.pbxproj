@@ -19,6 +19,9 @@
 		300F1F712C8B9818009DBDA9 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300F1F702C8B9818009DBDA9 /* LoginButton.swift */; };
 		300F1F732C8BA23A009DBDA9 /* CustomSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300F1F722C8BA23A009DBDA9 /* CustomSecureField.swift */; };
 		300F1F752C8BA4BF009DBDA9 /* AlertDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300F1F742C8BA4BF009DBDA9 /* AlertDialog.swift */; };
+		300F1F772C8CFAA7009DBDA9 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 300F1F762C8CFAA7009DBDA9 /* Launch Screen.storyboard */; };
+		300F1F792C8F3645009DBDA9 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300F1F782C8F3645009DBDA9 /* SignupView.swift */; };
+		300F1F7C2C8F443C009DBDA9 /* NavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300F1F7B2C8F443C009DBDA9 /* NavigationButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +38,9 @@
 		300F1F702C8B9818009DBDA9 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		300F1F722C8BA23A009DBDA9 /* CustomSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureField.swift; sourceTree = "<group>"; };
 		300F1F742C8BA4BF009DBDA9 /* AlertDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDialog.swift; sourceTree = "<group>"; };
+		300F1F762C8CFAA7009DBDA9 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		300F1F782C8F3645009DBDA9 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		300F1F7B2C8F443C009DBDA9 /* NavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,7 @@
 				300F1F5F2C8B6A4E009DBDA9 /* ViewModels */,
 				300F1F602C8B6A58009DBDA9 /* Views */,
 				300F1F502C8B6A12009DBDA9 /* HomeLinkApp.swift */,
+				300F1F762C8CFAA7009DBDA9 /* Launch Screen.storyboard */,
 				300F1F542C8B6A14009DBDA9 /* Assets.xcassets */,
 				300F1F562C8B6A14009DBDA9 /* Preview Content */,
 			);
@@ -109,6 +116,7 @@
 				300F1F612C8B6A9B009DBDA9 /* HeroView.swift */,
 				300F1F692C8B6FC1009DBDA9 /* HomeView.swift */,
 				300F1F632C8B6AAE009DBDA9 /* LoginView.swift */,
+				300F1F782C8F3645009DBDA9 /* SignupView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -135,6 +143,7 @@
 				300F1F702C8B9818009DBDA9 /* LoginButton.swift */,
 				300F1F742C8BA4BF009DBDA9 /* AlertDialog.swift */,
 				300F1F722C8BA23A009DBDA9 /* CustomSecureField.swift */,
+				300F1F7B2C8F443C009DBDA9 /* NavigationButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -197,6 +206,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				300F1F772C8CFAA7009DBDA9 /* Launch Screen.storyboard in Resources */,
 				300F1F582C8B6A14009DBDA9 /* Preview Assets.xcassets in Resources */,
 				300F1F552C8B6A14009DBDA9 /* Assets.xcassets in Resources */,
 			);
@@ -214,10 +224,12 @@
 				300F1F532C8B6A12009DBDA9 /* ContentView.swift in Sources */,
 				300F1F512C8B6A12009DBDA9 /* HomeLinkApp.swift in Sources */,
 				300F1F642C8B6AAE009DBDA9 /* LoginView.swift in Sources */,
+				300F1F7C2C8F443C009DBDA9 /* NavigationButton.swift in Sources */,
 				300F1F6A2C8B6FC1009DBDA9 /* HomeView.swift in Sources */,
 				300F1F672C8B6AC5009DBDA9 /* LoginViewModel.swift in Sources */,
 				300F1F732C8BA23A009DBDA9 /* CustomSecureField.swift in Sources */,
 				300F1F752C8BA4BF009DBDA9 /* AlertDialog.swift in Sources */,
+				300F1F792C8F3645009DBDA9 /* SignupView.swift in Sources */,
 				300F1F622C8B6A9B009DBDA9 /* HeroView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,6 +371,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -389,6 +402,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

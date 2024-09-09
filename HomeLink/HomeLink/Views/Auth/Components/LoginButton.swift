@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-import SwiftUI
-
 struct LoginButton: View {
     @Binding var isLoading: Bool
     @Binding var isSuccess: Bool
@@ -41,7 +39,7 @@ struct LoginButton: View {
                         if isSuccess {
                             CheckmarkView(showCheckmark: $showCheckmark)
                         } else {
-                            // Aqui você pode adicionar um ícone de erro ou similar
+                        
                         }
                     }
             }
