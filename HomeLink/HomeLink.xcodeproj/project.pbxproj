@@ -17,11 +17,22 @@
 		300F1F6A2C8B6FC1009DBDA9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300F1F692C8B6FC1009DBDA9 /* HomeView.swift */; };
 		300F1F6D2C8B8E50009DBDA9 /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300F1F6C2C8B8E50009DBDA9 /* APIHelper.swift */; };
 		300F1F712C8B9818009DBDA9 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300F1F702C8B9818009DBDA9 /* LoginButton.swift */; };
-		300F1F732C8BA23A009DBDA9 /* CustomSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300F1F722C8BA23A009DBDA9 /* CustomSecureField.swift */; };
+		300F1F732C8BA23A009DBDA9 /* CustomField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300F1F722C8BA23A009DBDA9 /* CustomField.swift */; };
 		300F1F752C8BA4BF009DBDA9 /* AlertDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300F1F742C8BA4BF009DBDA9 /* AlertDialog.swift */; };
 		300F1F772C8CFAA7009DBDA9 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 300F1F762C8CFAA7009DBDA9 /* Launch Screen.storyboard */; };
 		300F1F792C8F3645009DBDA9 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300F1F782C8F3645009DBDA9 /* SignupView.swift */; };
 		300F1F7C2C8F443C009DBDA9 /* NavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300F1F7B2C8F443C009DBDA9 /* NavigationButton.swift */; };
+		300F1F7F2C8F7C18009DBDA9 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300F1F7E2C8F7C18009DBDA9 /* HomeViewModel.swift */; };
+		300F1F822C8F843B009DBDA9 /* AdminTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300F1F812C8F843B009DBDA9 /* AdminTabBar.swift */; };
+		300F1F842C8F8459009DBDA9 /* UserTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300F1F832C8F8459009DBDA9 /* UserTabBar.swift */; };
+		300F1F862C8F8EE3009DBDA9 /* TabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300F1F852C8F8EE3009DBDA9 /* TabBarButton.swift */; };
+		300F1F882C8F918D009DBDA9 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300F1F872C8F918D009DBDA9 /* DashboardView.swift */; };
+		300F1F8A2C8F9197009DBDA9 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300F1F892C8F9197009DBDA9 /* ProfileView.swift */; };
+		300F1F8C2C8F91C0009DBDA9 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300F1F8B2C8F91C0009DBDA9 /* SearchView.swift */; };
+		300F1F8E2C8F91CB009DBDA9 /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300F1F8D2C8F91CB009DBDA9 /* CreateView.swift */; };
+		300F1F952C8F9AD6009DBDA9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300F1F942C8F9AD6009DBDA9 /* User.swift */; };
+		300F1F972C8F9AE9009DBDA9 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300F1F962C8F9AE9009DBDA9 /* SearchViewModel.swift */; };
+		300F1F992C8F9C97009DBDA9 /* UserCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300F1F982C8F9C97009DBDA9 /* UserCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,11 +47,22 @@
 		300F1F692C8B6FC1009DBDA9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		300F1F6C2C8B8E50009DBDA9 /* APIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
 		300F1F702C8B9818009DBDA9 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
-		300F1F722C8BA23A009DBDA9 /* CustomSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureField.swift; sourceTree = "<group>"; };
+		300F1F722C8BA23A009DBDA9 /* CustomField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomField.swift; sourceTree = "<group>"; };
 		300F1F742C8BA4BF009DBDA9 /* AlertDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDialog.swift; sourceTree = "<group>"; };
 		300F1F762C8CFAA7009DBDA9 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		300F1F782C8F3645009DBDA9 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		300F1F7B2C8F443C009DBDA9 /* NavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButton.swift; sourceTree = "<group>"; };
+		300F1F7E2C8F7C18009DBDA9 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		300F1F812C8F843B009DBDA9 /* AdminTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminTabBar.swift; sourceTree = "<group>"; };
+		300F1F832C8F8459009DBDA9 /* UserTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTabBar.swift; sourceTree = "<group>"; };
+		300F1F852C8F8EE3009DBDA9 /* TabBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarButton.swift; sourceTree = "<group>"; };
+		300F1F872C8F918D009DBDA9 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		300F1F892C8F9197009DBDA9 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		300F1F8B2C8F91C0009DBDA9 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		300F1F8D2C8F91CB009DBDA9 /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
+		300F1F942C8F9AD6009DBDA9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		300F1F962C8F9AE9009DBDA9 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		300F1F982C8F9C97009DBDA9 /* UserCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +118,7 @@
 		300F1F5E2C8B6A44009DBDA9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				300F1F942C8F9AD6009DBDA9 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -104,6 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				300F1F662C8B6AC5009DBDA9 /* LoginViewModel.swift */,
+				300F1F7E2C8F7C18009DBDA9 /* HomeViewModel.swift */,
+				300F1F962C8F9AE9009DBDA9 /* SearchViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -112,11 +137,10 @@
 			isa = PBXGroup;
 			children = (
 				300F1F6E2C8B9805009DBDA9 /* Auth */,
+				300F1F912C8F9435009DBDA9 /* Logged */,
 				300F1F522C8B6A12009DBDA9 /* ContentView.swift */,
-				300F1F612C8B6A9B009DBDA9 /* HeroView.swift */,
-				300F1F692C8B6FC1009DBDA9 /* HomeView.swift */,
-				300F1F632C8B6AAE009DBDA9 /* LoginView.swift */,
-				300F1F782C8F3645009DBDA9 /* SignupView.swift */,
+				300F1F902C8F9424009DBDA9 /* Hero */,
+				300F1F892C8F9197009DBDA9 /* ProfileView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -133,6 +157,8 @@
 			isa = PBXGroup;
 			children = (
 				300F1F6F2C8B9809009DBDA9 /* Components */,
+				300F1F782C8F3645009DBDA9 /* SignupView.swift */,
+				300F1F632C8B6AAE009DBDA9 /* LoginView.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -142,10 +168,65 @@
 			children = (
 				300F1F702C8B9818009DBDA9 /* LoginButton.swift */,
 				300F1F742C8BA4BF009DBDA9 /* AlertDialog.swift */,
-				300F1F722C8BA23A009DBDA9 /* CustomSecureField.swift */,
+				300F1F722C8BA23A009DBDA9 /* CustomField.swift */,
 				300F1F7B2C8F443C009DBDA9 /* NavigationButton.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		300F1F802C8F8427009DBDA9 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				300F1F812C8F843B009DBDA9 /* AdminTabBar.swift */,
+				300F1F852C8F8EE3009DBDA9 /* TabBarButton.swift */,
+				300F1F832C8F8459009DBDA9 /* UserTabBar.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		300F1F8F2C8F941A009DBDA9 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				300F1F872C8F918D009DBDA9 /* DashboardView.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		300F1F902C8F9424009DBDA9 /* Hero */ = {
+			isa = PBXGroup;
+			children = (
+				300F1F612C8B6A9B009DBDA9 /* HeroView.swift */,
+			);
+			path = Hero;
+			sourceTree = "<group>";
+		};
+		300F1F912C8F9435009DBDA9 /* Logged */ = {
+			isa = PBXGroup;
+			children = (
+				300F1F692C8B6FC1009DBDA9 /* HomeView.swift */,
+				300F1F802C8F8427009DBDA9 /* TabBar */,
+				300F1F8F2C8F941A009DBDA9 /* Dashboard */,
+				300F1F932C8F9456009DBDA9 /* Search */,
+				300F1F922C8F9446009DBDA9 /* Create */,
+			);
+			path = Logged;
+			sourceTree = "<group>";
+		};
+		300F1F922C8F9446009DBDA9 /* Create */ = {
+			isa = PBXGroup;
+			children = (
+				300F1F8D2C8F91CB009DBDA9 /* CreateView.swift */,
+			);
+			path = Create;
+			sourceTree = "<group>";
+		};
+		300F1F932C8F9456009DBDA9 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				300F1F8B2C8F91C0009DBDA9 /* SearchView.swift */,
+				300F1F982C8F9C97009DBDA9 /* UserCard.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,18 +300,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				300F1F972C8F9AE9009DBDA9 /* SearchViewModel.swift in Sources */,
+				300F1F882C8F918D009DBDA9 /* DashboardView.swift in Sources */,
+				300F1F8C2C8F91C0009DBDA9 /* SearchView.swift in Sources */,
+				300F1F992C8F9C97009DBDA9 /* UserCard.swift in Sources */,
 				300F1F6D2C8B8E50009DBDA9 /* APIHelper.swift in Sources */,
+				300F1F842C8F8459009DBDA9 /* UserTabBar.swift in Sources */,
 				300F1F712C8B9818009DBDA9 /* LoginButton.swift in Sources */,
+				300F1F822C8F843B009DBDA9 /* AdminTabBar.swift in Sources */,
 				300F1F532C8B6A12009DBDA9 /* ContentView.swift in Sources */,
+				300F1F862C8F8EE3009DBDA9 /* TabBarButton.swift in Sources */,
 				300F1F512C8B6A12009DBDA9 /* HomeLinkApp.swift in Sources */,
 				300F1F642C8B6AAE009DBDA9 /* LoginView.swift in Sources */,
 				300F1F7C2C8F443C009DBDA9 /* NavigationButton.swift in Sources */,
+				300F1F8A2C8F9197009DBDA9 /* ProfileView.swift in Sources */,
 				300F1F6A2C8B6FC1009DBDA9 /* HomeView.swift in Sources */,
 				300F1F672C8B6AC5009DBDA9 /* LoginViewModel.swift in Sources */,
-				300F1F732C8BA23A009DBDA9 /* CustomSecureField.swift in Sources */,
+				300F1F8E2C8F91CB009DBDA9 /* CreateView.swift in Sources */,
+				300F1F7F2C8F7C18009DBDA9 /* HomeViewModel.swift in Sources */,
+				300F1F732C8BA23A009DBDA9 /* CustomField.swift in Sources */,
 				300F1F752C8BA4BF009DBDA9 /* AlertDialog.swift in Sources */,
 				300F1F792C8F3645009DBDA9 /* SignupView.swift in Sources */,
 				300F1F622C8B6A9B009DBDA9 /* HeroView.swift in Sources */,
+				300F1F952C8F9AD6009DBDA9 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

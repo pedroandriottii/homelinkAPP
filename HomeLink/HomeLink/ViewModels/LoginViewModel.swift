@@ -10,6 +10,8 @@ import Combine
 
 struct LoginResponse: Codable {
     let accessToken: String
+    let userId: String
+    let userRole: String
 }
 
 class LoginViewModel: ObservableObject {
@@ -54,8 +56,11 @@ class LoginViewModel: ObservableObject {
                 switch result {
                 case .success(let response):
                     UserDefaults.standard.set(response.accessToken, forKey: "accessToken")
+                    UserDefaults.standard.set(response.userId, forKey: "userId")
+                    UserDefaults.standard.set(response.userRole, forKey: "userRole")
+                    
                     self.isLoggedIn = true
-                    print(response.accessToken)
+                    print("Token de Acesso: \(response.accessToken) // Id do usuário: \(response.userId) // Role: \(response.userRole)")
                 case .failure(let error) :
                     print(error.message)
                     self.errorMessage = "Erro ao realizar o Login: \(error.message)"

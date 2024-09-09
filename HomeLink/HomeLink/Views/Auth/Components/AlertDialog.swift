@@ -27,5 +27,5 @@ struct AlertDialog: View {
 }
 
 #Preview {
-    AlertDialog(message: "OI")
+    AlertDialog(message: "Erro: Exemplo de erro vindo da API.")
 }

@@ -17,19 +17,17 @@ struct LoginView: View {
                     .foregroundColor(.white)
                     .font(.title)
                 VStack{
-                    TextField("", text: $loginViewModel.email, prompt: Text("Email").foregroundColor(.gray))
-                        .padding()
-                        .frame(height: 50)
-                        .background(Color.hlSeccondary)
-                        
-                        .cornerRadius(12)
-                        .padding(.bottom)
+                    CustomField(
+                        object: $loginViewModel.email,
+                        placeholder: "Email",
+                        isSecure: false
+                    )
+                    .padding(.bottom)
                     
-                    CustomSecureField(
-                        password: $loginViewModel.password,
+                    CustomField(
+                        object: $loginViewModel.password,
                         placeholder: "******",
-                        placeholderColor: .gray,
-                        backgroundColor: Color.hlSeccondary
+                        isSecure: true
                         )
                     .padding(.bottom)
                     
@@ -39,7 +37,6 @@ struct LoginView: View {
                             .padding(.bottom)
                     }
                 }
-                .foregroundColor(.white)
                 
                 
                 Button(action: {
@@ -50,12 +47,17 @@ struct LoginView: View {
                 }
                 .frame(maxWidth: .infinity)
                 .disabled(loginViewModel.isLoading)
+                Text("Esqueceu a senha?")
+                    .foregroundStyle(.hlBlue)
+                    .underline()
                 Spacer()
             }
+            
             .padding()
             .fullScreenCover(isPresented: $loginViewModel.isLoggedIn){
                 HomeView()
             }
+            
 
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
