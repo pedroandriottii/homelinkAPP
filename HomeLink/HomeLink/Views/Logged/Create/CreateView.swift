@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-import SwiftUI
-
 struct CreateView: View {
     var body: some View {
         VStack (alignment: .leading) {
@@ -18,8 +16,10 @@ struct CreateView: View {
             VStack(spacing: 0) {
                 Image("hero1")
                     .resizable()
-                    .scaledToFit()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(height: 180)
                     .frame(maxWidth: .infinity)
+                    .clipped()
                 
                 Text("Novo Orçamento")
                     .font(.title3)

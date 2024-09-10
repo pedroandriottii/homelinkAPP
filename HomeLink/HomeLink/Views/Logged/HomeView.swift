@@ -36,8 +36,6 @@ struct HomeView: View {
                 }
 
                 Spacer()
-                Text("\(selectedTab)")
-                    .foregroundStyle(.red)
                 AdminTabBar(selectedTab: $selectedTab)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)

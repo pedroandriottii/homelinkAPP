@@ -33,6 +33,11 @@
 		300F1F952C8F9AD6009DBDA9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300F1F942C8F9AD6009DBDA9 /* User.swift */; };
 		300F1F972C8F9AE9009DBDA9 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300F1F962C8F9AE9009DBDA9 /* SearchViewModel.swift */; };
 		300F1F992C8F9C97009DBDA9 /* UserCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300F1F982C8F9C97009DBDA9 /* UserCard.swift */; };
+		300F1F9B2C8FA4B5009DBDA9 /* UserDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300F1F9A2C8FA4B5009DBDA9 /* UserDetailsView.swift */; };
+		300F1F9D2C8FA6B3009DBDA9 /* UserDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300F1F9C2C8FA6B3009DBDA9 /* UserDetailsViewModel.swift */; };
+		300F1F9F2C906905009DBDA9 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300F1F9E2C906905009DBDA9 /* CircleImage.swift */; };
+		300F1FA12C908EC9009DBDA9 /* GlassCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300F1FA02C908EC9009DBDA9 /* GlassCard.swift */; };
+		302E18752C9103B9000C0D07 /* PreviewStateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302E18742C9103B9000C0D07 /* PreviewStateHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +68,11 @@
 		300F1F942C8F9AD6009DBDA9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		300F1F962C8F9AE9009DBDA9 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		300F1F982C8F9C97009DBDA9 /* UserCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCard.swift; sourceTree = "<group>"; };
+		300F1F9A2C8FA4B5009DBDA9 /* UserDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsView.swift; sourceTree = "<group>"; };
+		300F1F9C2C8FA6B3009DBDA9 /* UserDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewModel.swift; sourceTree = "<group>"; };
+		300F1F9E2C906905009DBDA9 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		300F1FA02C908EC9009DBDA9 /* GlassCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassCard.swift; sourceTree = "<group>"; };
+		302E18742C9103B9000C0D07 /* PreviewStateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewStateHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +139,7 @@
 				300F1F662C8B6AC5009DBDA9 /* LoginViewModel.swift */,
 				300F1F7E2C8F7C18009DBDA9 /* HomeViewModel.swift */,
 				300F1F962C8F9AE9009DBDA9 /* SearchViewModel.swift */,
+				300F1F9C2C8FA6B3009DBDA9 /* UserDetailsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -140,7 +151,6 @@
 				300F1F912C8F9435009DBDA9 /* Logged */,
 				300F1F522C8B6A12009DBDA9 /* ContentView.swift */,
 				300F1F902C8F9424009DBDA9 /* Hero */,
-				300F1F892C8F9197009DBDA9 /* ProfileView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -149,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				300F1F6C2C8B8E50009DBDA9 /* APIHelper.swift */,
+				302E18742C9103B9000C0D07 /* PreviewStateHelper.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -166,10 +177,12 @@
 		300F1F6F2C8B9809009DBDA9 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				300F1F702C8B9818009DBDA9 /* LoginButton.swift */,
 				300F1F742C8BA4BF009DBDA9 /* AlertDialog.swift */,
+				300F1F9E2C906905009DBDA9 /* CircleImage.swift */,
 				300F1F722C8BA23A009DBDA9 /* CustomField.swift */,
+				300F1F702C8B9818009DBDA9 /* LoginButton.swift */,
 				300F1F7B2C8F443C009DBDA9 /* NavigationButton.swift */,
+				300F1FA02C908EC9009DBDA9 /* GlassCard.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -204,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				300F1F692C8B6FC1009DBDA9 /* HomeView.swift */,
+				302E18732C91012D000C0D07 /* Profile */,
 				300F1F802C8F8427009DBDA9 /* TabBar */,
 				300F1F8F2C8F941A009DBDA9 /* Dashboard */,
 				300F1F932C8F9456009DBDA9 /* Search */,
@@ -225,8 +239,17 @@
 			children = (
 				300F1F8B2C8F91C0009DBDA9 /* SearchView.swift */,
 				300F1F982C8F9C97009DBDA9 /* UserCard.swift */,
+				300F1F9A2C8FA4B5009DBDA9 /* UserDetailsView.swift */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		302E18732C91012D000C0D07 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				300F1F892C8F9197009DBDA9 /* ProfileView.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,6 +326,7 @@
 				300F1F972C8F9AE9009DBDA9 /* SearchViewModel.swift in Sources */,
 				300F1F882C8F918D009DBDA9 /* DashboardView.swift in Sources */,
 				300F1F8C2C8F91C0009DBDA9 /* SearchView.swift in Sources */,
+				300F1F9F2C906905009DBDA9 /* CircleImage.swift in Sources */,
 				300F1F992C8F9C97009DBDA9 /* UserCard.swift in Sources */,
 				300F1F6D2C8B8E50009DBDA9 /* APIHelper.swift in Sources */,
 				300F1F842C8F8459009DBDA9 /* UserTabBar.swift in Sources */,
@@ -311,12 +335,16 @@
 				300F1F532C8B6A12009DBDA9 /* ContentView.swift in Sources */,
 				300F1F862C8F8EE3009DBDA9 /* TabBarButton.swift in Sources */,
 				300F1F512C8B6A12009DBDA9 /* HomeLinkApp.swift in Sources */,
+				300F1F9D2C8FA6B3009DBDA9 /* UserDetailsViewModel.swift in Sources */,
 				300F1F642C8B6AAE009DBDA9 /* LoginView.swift in Sources */,
 				300F1F7C2C8F443C009DBDA9 /* NavigationButton.swift in Sources */,
+				300F1FA12C908EC9009DBDA9 /* GlassCard.swift in Sources */,
 				300F1F8A2C8F9197009DBDA9 /* ProfileView.swift in Sources */,
 				300F1F6A2C8B6FC1009DBDA9 /* HomeView.swift in Sources */,
+				302E18752C9103B9000C0D07 /* PreviewStateHelper.swift in Sources */,
 				300F1F672C8B6AC5009DBDA9 /* LoginViewModel.swift in Sources */,
 				300F1F8E2C8F91CB009DBDA9 /* CreateView.swift in Sources */,
+				300F1F9B2C8FA4B5009DBDA9 /* UserDetailsView.swift in Sources */,
 				300F1F7F2C8F7C18009DBDA9 /* HomeViewModel.swift in Sources */,
 				300F1F732C8BA23A009DBDA9 /* CustomField.swift in Sources */,
 				300F1F752C8BA4BF009DBDA9 /* AlertDialog.swift in Sources */,

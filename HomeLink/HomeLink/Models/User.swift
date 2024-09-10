@@ -12,4 +12,6 @@ struct User: Decodable, Identifiable {
     let name: String
     let email: String
     let phone: String
+    let amazonMail: String?
+    let amazonPassword: String?
 }

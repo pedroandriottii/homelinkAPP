@@ -14,12 +14,12 @@ struct ContentView: View {
         VStack(alignment: .center){
             TabView {
                 ForEach(imageNames, id: \.self) { imageName in
-                    Image(imageName)
-                        .resizable()
-                        .scaledToFill()
-                        .frame(height: 500)
-                        .frame(width: 200)
-                        .clipped()
+//                    Image(imageName)
+//                        .resizable()
+//                        .scaledToFill()
+//                        .frame(height: 500)
+//                        .frame(width: 200)
+//                        .clipped()
                 }
             }
             .tabViewStyle(PageTabViewStyle())

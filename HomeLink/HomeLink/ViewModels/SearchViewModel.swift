@@ -18,7 +18,6 @@ final class SearchViewModel: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
 
     init() {
-        // Atualiza os resultados filtrados com base na consulta de busca
         $searchQuery
             .debounce(for: .milliseconds(300), scheduler: RunLoop.main)
             .sink { [weak self] query in
@@ -29,12 +28,10 @@ final class SearchViewModel: ObservableObject {
         fetchUsers()
     }
 
-    // Busca todos os usuários
     func fetchUsers() {
         isLoading = true
         errorMessage = nil
         
-        // Recupera o token do UserDefaults
         guard let accessToken = UserDefaults.standard.string(forKey: "accessToken") else {
             self.errorMessage = "Token de autenticação não encontrado."
             self.isLoading = false

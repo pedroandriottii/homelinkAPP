@@ -27,7 +27,6 @@ struct SearchView: View {
                     VStack(spacing: 16) {
                         ForEach(viewModel.filteredUsers) { user in
                             UserCard(user: user)
-                                .frame(maxWidth: .infinity)
                         }
                     }
                     .padding()
